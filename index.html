@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./meu_reset.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+   
+
+    <title>JP Transportes</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="page_receipt">  
+          <section class="form">
+            <h2>JP Transportes</h2>
+            <div class="form_div">
+              <input type="number" class="form_nValue" placeholder="Digite o valor ex: R$ 450,00" onkeydown="handleEnter(event, '.form_name')">
+              <input class="form_name" type="text" placeholder="Digite o nome do passageiro" onkeydown="handleEnter(event, '.form_exValue')">
+              <input type="text" class="form_exValue" placeholder="Digite o valor por extenso" onkeydown="handleEnter(event, '.form_origem')">
+              <input type="text" class="form_origem" placeholder="Local de Origem" onkeydown="handleEnter(event, '.form_destino')">
+              <input type="text" class="form_destino" placeholder="Local de destino" onkeydown="handleEnter(event, '.form_data')">
+              <input type="text" class="form_data" placeholder="Data da viagem" onkeydown="handleEnter(event, '.form_dName')">
+              <input type="text" class="form_dName" placeholder="Digite o nome do motorista" onkeydown="handleEnter(event, '.form_cpf')">
+              <input type="number" class="form_cpf" placeholder="Digite o CPF do motorista" onkeydown="handleEnter(event, '.form_carModel')">
+              <input type="text" class="form_carModel" placeholder="Digite o modelo do veículo" onkeydown="handleEnter(event, '.form_plate')">
+              <input type="text" class="form_plate" placeholder="Digite a placa do veículo">
+
+              <button type="submit" class="form_button">Gerar Recibo</button>
+
+            </div>
+          </section>
+
+          <section class="top_img hide">
+            <img class="printer" src="./Assests/printer.png" alt="Imagem de impressora">
+            <img class="exit" src="./Assests/exit.png" alt="letra X">
+          </section>
+
+          <section class="receipt hide">            
+            <div class="receipt_title">
+              <div class="title_img1">
+                <img src="./Assests/logoJP.png" alt="JP logo" />
+                <p>
+                  JP Transportes <br />
+                  Rua: Primo José Mattioni, 501<br />
+                  Vl. Brizzola - Indaiatuba / SP<br />
+                  CNPJ - 31.907.243/0001-31<br />
+                  Contato: 19 - 99111-8645
+                </p>
+              </div>
+              <div class="title_img2">
+                <img src="./Assests/car.png" alt="imagem de um taxi" />
+              </div>
+            </div>
+
+            <section class="belt">
+              <img
+                src="./Assests/faixa.png"
+                alt="faixa com escrito transporte executivo"
+              />
+            </section>
+
+            <section class="principal">
+              <section class="numeric_value">
+                <p>
+                  Valor Total:&nbsp
+                  <span class="value"> R$ 450,00 </span>
+                </p>
+              </section>
+
+              <section class="passenger">
+                <div class="passenger_title">Recebemos de :</div>
+                <div class="passenger_name">
+                  <span class="name">Fulana de Tal</span>
+                </div>
+              </section>
+
+              <section class="passenger_value">
+                <div class="value_title">o valor de :</div>
+                <div class="passenger_vString">
+                  <span class="ex_value">Quatrocento e cinquenta reais</span>
+                </div>              
+              </section>
+              <div class="reference">
+                Referente a serviços de transporte
+              </div>
+
+              <section class="itinerary">
+                <div class="itinerary_title">Itinerátio :</div>
+                <span class="cityA">Indaiatuba</span>
+                <div class="div"> X </div>
+                <span class="cityB">Guarulhos</span>
+                <div class="date">
+                  Data :&nbsp
+                  <span class="receipt_date">00/00/0000</span>
+                </div>
+              </section>
+
+              <section class="driver">
+                <section class="drivers_doc">
+                  <div class="drA">
+                  <div class="dTitle">
+                    Motorista :
+                  </div>
+                  <span class="dName">Jefferson Passos</span>
+                  </div>
+                  <div class="drB">
+                  <div class="docTitle">CPF :</div>
+                  <span class="docNumber">275.694.378-96</span>
+                  </div>
+                </section>
+
+              <section class="car">
+                <section class="car_model">
+
+                  <div class="carA">
+                    <div class="cTitle">Veiculo :</div>
+                    <span class="cModel">Logan</span>
+                  </div>
+
+                  <div class="carB">
+                    <div class="plateTitle">Placa : </div>
+                    <span class="plate">QOD-9C02</span>
+                  </div>
+
+               </section>
+
+              </section>
+            </section>
+          </section>
+      </div>
+    </main>
+     <script src="./script.js"></script>
+  </body>
+</html>
