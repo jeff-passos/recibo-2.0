@@ -86,8 +86,18 @@ main {
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   #menu {
-    width: 40.0rem;
-    height: 80.0rem;
+    width: 40rem;
+    height: 80rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 1280px) {
+  #menu {
+    width: 40rem;
+    height: 80rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
