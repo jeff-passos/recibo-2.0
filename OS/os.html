@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../data/meu_reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="../data/meu_reset.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>JP Transportes</title>
+  </head>
+  <body>
+    <main>
+      <div class="os_div">
+        <h2>JP Transportes</h2>
+        <form id="os_form">
+          <input
+            type="text"
+            class="os_number"
+            placeholder="Insira o número da O.S"
+          />
+          <input
+            type="text"
+            class="os_driver"
+            placeholder="Insira o nome do motorista"
+          />
+          <input
+            type="text"
+            class="os_enterprise"
+            placeholder="Insira o nome da empresa"
+          />
+          <input
+            type="text"
+            class="os_client"
+            placeholder="Insira o nome do cliente"
+          />
+          <input type="text" class="os_date" placeholder="Insira a Data" />
+          <input type="text" class="os_start" placeholder="Insira a origem" />
+          <input
+            type="text"
+            class="os_stop"
+            placeholder="Insira a parada (se houver)"
+          />
+          <input
+            type="text"
+            class="os_destination"
+            placeholder="Insira o destino"
+          />
+          <textarea
+            class="os_comments"
+            name="Observações"
+            rows="4"
+            cols="30"
+            placeholder="Insira suas observações"
+          ></textarea>
+        </form>
+
+        <button class="generate">Gerar O.S</button>
+      </div>
+    </main>
+  </body>
+</html>

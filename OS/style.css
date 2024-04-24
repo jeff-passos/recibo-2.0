@@ -1,0 +1,89 @@
+:root {
+  --bg-color: hsl(194, 5%, 7%);
+  --bg-menu-color: hsl(0, 3%, 88%);
+  --border-color: rgb(92, 123, 136);
+  --placeholder-color: rgb(193, 191, 191);
+}
+
+* {
+  font-family: "roboto" sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.os_div {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  background-color: var(--bg-menu-color);
+  padding: 3rem 1rem;
+  border-radius: 0.5rem;
+  border: 5px solid var(--border-color);
+  min-width: 37.5rem;
+  min-height: 66.7rem;
+  padding: 2rem 2rem;
+}
+
+#os_form {
+  display: flex;
+  flex-direction: column;
+  min-width: 30.5rem;
+  gap: 2rem;
+}
+
+.os_div h2 {
+  margin-bottom: 2rem;
+}
+
+#os_form input {
+  line-height: 3rem;
+  padding-left: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+#os_form input::placeholder {
+  font-family: "roboto" sans-serif;
+  font-weight: bolder;
+  letter-spacing: 0.1rem;
+  color: var(--placeholder-color);
+}
+
+#os_form textarea::placeholder {
+  font-family: "roboto" sans-serif;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  color: var(--placeholder-color);
+}
+
+#os_form textarea {
+  border: 1px solid var(--border-color);
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 20rem;
+  height: 3rem;
+  margin-top: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-weight: bolder;
+}

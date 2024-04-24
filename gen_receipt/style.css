@@ -1,0 +1,330 @@
+:root {
+  --bg-color: hsl(194, 5%, 7%);
+  --bg-menu-color: hsl(0, 3%, 88%);
+  --border-color: rgb(92, 123, 136);
+  --placeholder-color: rgb(193, 191, 191);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.hide {
+  display: none !important;
+}
+
+.page_receipt {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--bg-color);
+}
+
+/*FORMULARIO*/
+.form {
+
+  background-color: var(--bg-menu-color);
+  border: 5px solid var(--border-color);
+  border-radius: 2rem;
+}
+
+.form_div {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+}
+
+.form h2 {
+  margin-bottom: 2rem;
+}
+
+.form_div {
+  row-gap: 1.5rem;
+  width: 30rem;
+  margin: 0 auto;
+}
+
+.form_div input {
+  line-height: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+  padding-left: 2rem;
+}
+.form_div input::placeholder {
+  font-size: 1.5rem;
+  padding-left: 0rem;
+  color: var(--placeholder-color);
+}
+
+.form_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: 20rem;
+  height: 3rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-weight: bolder;
+}
+
+/*RECIBO*/
+
+.top_img {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  justify-content: flex-end;
+}
+
+.printer {
+  width: 3%;
+}
+.exit {
+  width: 2%;
+}
+
+.page_receipt .receipt {
+  width: 90rem;
+  height: 60rem;
+  background-color: #f3db3d;
+  border-radius: 1rem;
+}
+
+.receipt_title {
+  display: flex;
+  padding: 0 5rem;
+  width: 100%;
+  height: 15rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.receipt_title .title_img1 {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.receipt_title .title_img1 img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.receipt_title .title_img2 img {
+  width: 12rem;
+  height: 10rem;
+}
+
+.belt img {
+  width: 90rem;
+}
+
+/*Dados da Viagem*/
+
+.principal {
+  padding: 2rem 3rem;
+}
+
+.numeric_value {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.numeric_value span {
+  background-color: var(--placeholder-color);
+  padding: 0 1rem;
+}
+
+.principal {
+  width: 85rem;
+  margin: 0 auto;
+}
+
+.passenger {
+  margin-bottom: 1rem;
+}
+
+.passenger,
+.passenger_value,
+.itinerary,
+.date,
+.drA,
+.drB,
+.carA,
+.carB {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.passenger_title,
+.value_title,
+.itinerary_title,
+.date,
+.drA,
+.drB,
+.carA,
+.carB {
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.passenger_name,
+.passenger_vString {
+  display: flex;
+  width: 100%;
+}
+
+.passenger_name .name,
+.passenger_value .value,
+.passenger_vString,
+.receipt_date,
+.cityA,
+.cityB,
+.dName,
+.docNumber,
+.cModel,
+.plate {
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 3rem;
+  border-radius: 0.4rem;
+  padding-left: 1rem;
+}
+.reference {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.itinerary {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.itinerary .cityA,
+.cityB {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.date .receipt_date {
+  display: flex;
+  justify-content: center;
+}
+
+.drivers_doc,
+.car_model {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.drB,
+.plateTitle,
+.docTitle {
+  margin-left: 1rem;
+}
+
+.drA,
+.drB {
+  margin: 0;
+}
+
+.cTitle {
+  margin-right: 2rem;
+}
+
+.docTitle {
+  margin-right: 1.3rem;
+}
+
+.itinerary_title {
+  margin-right: 0.5rem;
+}
+@media print {
+  .printer,
+  .top_img {
+    display: none;
+  }
+  .page_receipt {
+    background-color: #fff;
+  }
+  body {
+    transform: scale(0.8);
+  }
+}
+
+.printer:active {
+  transform: scale(0.9); /* Diminui o tamanho do elemento quando pressionado */
+}
+
+/* Adicionando efeito de clique para a classe exit */
+.exit:active {
+  transform: scale(0.9); /* Diminui o tamanho do elemento quando pressionado */
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .form {
+    min-width: 37.5rem;
+    min-height: 66.7rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  }
+
+  .form{
+    min-width: 37.5rem;
+    min-height: 66.7rem;
+    padding: 2rem;
+  }
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form {
+    min-width: 37.5rem;
+    min-height: 66.7rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .form {
+    max-width: 40rem;
+    max-height: 80rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .form_div{
+    gap: 2.5rem;
+  }
+
+  .form_button{
+    margin-top: 3rem;
+  }
+  .form_div input{
+    line-height: 3rem;
+  }
+}

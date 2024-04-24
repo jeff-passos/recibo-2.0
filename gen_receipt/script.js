@@ -12,22 +12,23 @@ const dNameInput = document.querySelector(".form_dName")
 const cpfInput = document.querySelector(".form_cpf")
 const carModelInput = document.querySelector(".form_carModel")
 const plateInput = document.querySelector(".form_plate")
+
 const formButton = document.querySelector(".form_button")
 const image = document.querySelector(".exit")
 
 function generate(event) {
   event.preventDefault()
   // Capturando os valores dos campos do formulário
-  console.log("Valor: ", nValueInput.value)
-  console.log("Nome do passageiro: ", nameInput.value)
-  console.log("Valor por extenso: ", exValueInput.value)
-  console.log("Local de origem: ", origemInput.value)
-  console.log("Local de destino: ", destinoInput.value)
-  console.log("Data da viagem: ", dataInput.value)
-  console.log("Nome do motorista: ", dNameInput.value)
-  console.log("CPF do motorista: ", cpfInput.value)
-  console.log("Modelo do veículo: ", carModelInput.value)
-  console.log("Placa do veículo: ", plateInput.value)
+  document.querySelector(".value").innerText = nValueInput.value
+  document.querySelector(".name").innerText = nameInput.value
+  document.querySelector(".ex_value").innerText = exValueInput.value
+  document.querySelector(".cityA").innerText = origemInput.value
+  document.querySelector(".cityB").innerText = destinoInput.value
+  document.querySelector(".receipt_date").innerText = dataInput.value
+  document.querySelector(".dName").innerText = dNameInput.value
+  document.querySelector(".docNumber").innerText = cpfInput.value
+  document.querySelector(".cModel").innerText = carModelInput.value
+  document.querySelector(".plate").innerText = plateInput.value
 }
 
 form.addEventListener("submit", generate)
@@ -60,4 +61,12 @@ function toggleFormVisibility() {
     receipt.classList.remove("hide")
     top_img.classList.remove("hide")
   }
+}
+
+const printerImage = document.querySelector(".printer")
+
+printerImage.addEventListener("click", printReceipt)
+
+function printReceipt() {
+  window.print()
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./meu_reset.css" />
+    <link rel="stylesheet" href="../data/meu_reset.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -23,20 +23,18 @@
           <section class="form">
             <h2>JP Transportes</h2>
             <div class="form_div">
-              <input type="number" class="form_nValue" placeholder="Digite o valor ex: R$ 450,00" onkeydown="handleEnter(event, '.form_name')">
-              <input class="form_name" type="text" placeholder="Digite o nome do passageiro" onkeydown="handleEnter(event, '.form_exValue')">
-              <input type="text" class="form_exValue" placeholder="Digite o valor por extenso" onkeydown="handleEnter(event, '.form_origem')">
-              <input type="text" class="form_origem" placeholder="Local de Origem" onkeydown="handleEnter(event, '.form_destino')">
-              <input type="text" class="form_destino" placeholder="Local de destino" onkeydown="handleEnter(event, '.form_data')">
-              <input type="text" class="form_data" placeholder="Data da viagem" onkeydown="handleEnter(event, '.form_dName')">
-              <input type="text" class="form_dName" placeholder="Digite o nome do motorista" onkeydown="handleEnter(event, '.form_cpf')">
-              <input type="number" class="form_cpf" placeholder="Digite o CPF do motorista" onkeydown="handleEnter(event, '.form_carModel')">
-              <input type="text" class="form_carModel" placeholder="Digite o modelo do veículo" onkeydown="handleEnter(event, '.form_plate')">
-              <input type="text" class="form_plate" placeholder="Digite a placa do veículo">
-
-              <button type="submit" class="form_button">Gerar Recibo</button>
-
+              <input type="text" class="form_nValue" placeholder="Digite o valor ex: R$ 450,00" onkeydown="handleEnter(event, '.form_name')"autocomplete="on">
+              <input class="form_name" type="text" placeholder="Digite o nome do passageiro" onkeydown="handleEnter(event, '.form_exValue')"autocomplete="on">
+              <input type="text" class="form_exValue" placeholder="Digite o valor por extenso" onkeydown="handleEnter(event, '.form_origem')"autocomplete="on">
+              <input type="text" class="form_origem" placeholder="Local de Origem" onkeydown="handleEnter(event, '.form_destino')"autocomplete="on">
+              <input type="text" class="form_destino" placeholder="Local de destino" onkeydown="handleEnter(event, '.form_data')"autocomplete="on">
+              <input type="text" class="form_data" placeholder="Data da viagem" onkeydown="handleEnter(event, '.form_dName')"autocomplete="on">
+              <input type="text" class="form_dName" placeholder="Digite o nome do motorista" onkeydown="handleEnter(event, '.form_cpf')"autocomplete="on">
+              <input type="text" class="form_cpf" placeholder="Digite o CPF do motorista" onkeydown="handleEnter(event, '.form_carModel')"autocomplete="on">
+              <input type="text" class="form_carModel" placeholder="Digite o modelo do veículo" onkeydown="handleEnter(event, '.form_plate')"autocomplete="on">
+              <input type="text" class="form_plate" placeholder="Digite a placa do veículo"autocomplete="on">
             </div>
+              <button type="submit" class="form_button" onclick="generate(event)">Gerar Recibo</button>
           </section>
 
           <section class="top_img hide">
